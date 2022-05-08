@@ -13,16 +13,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-    <title>Document</title>
+    <title>Category Page</title>
 
 
-    <link href="css/prism.css" rel="stylesheet">
-    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <!--<link href="css/prism.css" rel="stylesheet">-->
+    <!--<link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">-->
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />-->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -37,7 +38,7 @@
 </head>
 
 <body>
-    
+    <!--TOP BAR-->
     <div class="row" id="TopBar">
         <div class="col right">
             <ul class="collapsible">
@@ -54,131 +55,136 @@
                         <button type="button" class="" onclick="goCheckOut()">Check out</button>
                         <script>
                             function goCheckOut() {
-                                window.location.href="checkOut.html";
+                                window.location.href = "checkOut.html";
                             }
                         </script>
                     </div>
                 </li>
             </ul>
+            <button type="button" class="" onclick="logout()">Logout</button>
+            <script>
+                function logout() {
+                    window.location.href = "login_page.html";
+                }
+            </script>
         </div>
     </div>
-    <div class="logo-text"> <span class="text text-center">Shopping here is basically stealing!</span> </div>
+    <!--CATEGORY BAR-->
+    <div class="logo-text"> <span class="text text-center">
+            <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
+        </span> </div>
     <div class="navbar">
-        <a href="#home">Home</a>
+        <button type="button" class="" onclick="goHome()">Home</button>
+        <script>
+            function goHome() {
+                window.location.href = "main_page.html";
+            }
+        </script>
+        <button type="button" class="" onclick="goCategoryPage()">ComputerPage</button>
+        <script>
+            function goCategoryPage() {
+                window.location.href = "category.html";
+            }
+        </script>
         <div class="subnav">
-          <button class="subnavbtn">Computers <i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-            <a href="#laptops">Laptops</a>
-            <a href="#notebooks">Notebooks</a>
-            <a href="#workstations">Workstations</a>
-            <a href="#tablets">Tablets</a>
-          </div>
-        </div> 
+            <button class="subnavbtn">Computers <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#laptops">Laptops</a>
+                <a href="#notebooks">Notebooks</a>
+                <a href="#workstations">Workstations</a>
+                <a href="#tablets">Tablets</a>
+            </div>
+        </div>
         <div class="subnav">
-          <button class="subnavbtn">Phones <i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-            <a href="#apple">Apple</a>
-            <a href="#samsung">Samsung</a>
-            <a href="#huawei">Huawei</a>
-            <a href="#lg">Lg</a>
-          </div>
-        </div> 
+            <button class="subnavbtn">Phones <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#apple">Apple</a>
+                <a href="#samsung">Samsung</a>
+                <a href="#huawei">Huawei</a>
+                <a href="#lg">Lg</a>
+            </div>
+        </div>
         <div class="subnav">
-          <button class="subnavbtn">Photo Tech <i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-            <a href="#cameras">Cameras</a>
-            <a href="#lenses">Lenses</a>
-            <a href="#equipment">Equipment</a>
-          </div>
+            <button class="subnavbtn">Photo Tech <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#cameras">Cameras</a>
+                <a href="#lenses">Lenses</a>
+                <a href="#equipment">Equipment</a>
+            </div>
         </div>
         <a href="#sports">Sports</a>
         <a href="#tv/audio">TV/Audio</a>
         <a href="#tools">Tools</a>
-      </div>
-      
-      <div style="padding:0 16px">
-      </div>
-    <div>
-        <div class="col s3">
-            p1
-        </div>
-        <div class="col s3">
-            p2
-        </div>
-            
-        </div>
-        <div class="col s3">
-            p3
-        </div>
-        </div>
     </div>
-    <div class="row mt-2 g-4">
-        <div class="col-md-3">
+    <!--PRODUCT LIST-->
+    <div style="padding:0 16px"></div>
+    <div class="row">
+        <div class="col sp3">
             <div class="card p-1">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Mobile</span> <span>Phones</span> </div>
-                    <div> <img src="https://i.imgur.com/b9zkoz0.jpg" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/b9zkoz0.jpg" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Head</span> <span>Phones</span> </div>
-                    <div> <img src="https://i.imgur.com/SHWASPG.png" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/SHWASPG.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Watches</span> </div>
-                    <div> <img src=" https://i.imgur.com/Ya0OXCv.png" height="100" width="100" /> </div>
+                    <div> <img src=" https://i.imgur.com/Ya0OXCv.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Air</span> <span>Purifiers</span> </div>
-                    <div> <img src="https://i.imgur.com/2gvGwbh.png" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/2gvGwbh.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2tr5">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Vacuum</span> <span>Cleaners</span> </div>
-                    <div> <img src="https://i.imgur.com/UMQJpSG.png" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/UMQJpSG.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Washing</span> <span>Machines</span> </div>
-                    <div> <img src="https://i.imgur.com/e9CyhXR.png" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/e9CyhXR.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Televisions</span> </div>
-                    <div> <img src=" https://i.imgur.com/Zq8VigZ.png" height="100" width="100" /> </div>
+                    <div> <img src=" https://i.imgur.com/Zq8VigZ.png" /> </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col sp3">
             <div class="card p-2">
                 <div class="d-flex justify-content-between align-items-center p-2">
                     <div class="flex-column lh-1 imagename"> <span>Laptops</span> </div>
-                    <div> <img src="https://i.imgur.com/6pK5oZl.jpg" height="100" width="100" /> </div>
+                    <div> <img src="https://i.imgur.com/6pK5oZl.jpg" /> </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
