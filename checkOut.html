@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+    <link href="css/prism.css" rel="stylesheet">
+
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, { accordion: true });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Check Out</title>
+</head>
+
+<body>
+    <!--TOP BAR-->
+    <div class="row" id="TopBar">
+        <div class="col right">
+            <button type="button" class="" onclick="logout()">Logout</button>
+            <script>
+                function logout() {
+                    window.location.href = "login_page.html";
+                }
+            </script>
+        </div>
+    </div>
+    <!--CATEGORY BAR-->
+    <div class="logo-text"> <span class="text text-center">
+            <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
+        </span> </div>
+    <div class="navbar">
+        <button type="button" class="" onclick="goHome()">Home</button>
+        <script>
+            function goHome() {
+                window.location.href = "main_page.html";
+            }
+        </script>
+        <button type="button" class="" onclick="goCategoryPage()">ComputerPage</button>
+        <script>
+            function goCategoryPage() {
+                window.location.href = "category.html";
+            }
+        </script>
+        <div class="subnav">
+            <button class="subnavbtn">Computers <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#laptops">Laptops</a>
+                <a href="#notebooks">Notebooks</a>
+                <a href="#workstations">Workstations</a>
+                <a href="#tablets">Tablets</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Phones <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#apple">Apple</a>
+                <a href="#samsung">Samsung</a>
+                <a href="#huawei">Huawei</a>
+                <a href="#lg">Lg</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Photo Tech <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#cameras">Cameras</a>
+                <a href="#lenses">Lenses</a>
+                <a href="#equipment">Equipment</a>
+            </div>
+        </div>
+        <a href="#sports">Sports</a>
+        <a href="#tv/audio">TV/Audio</a>
+        <a href="#tools">Tools</a>
+    </div>
+    <!--ITEM LIST-->
+    <div class="row" id="ContentBar">
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+        <div class="col s3">
+            <!--Item-->
+            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
+            <p class="text-primary">$499</p>
+            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                alt="item" class="img-fluid" />
+        </div>
+    </div>
+</body>
+
+</html>
