@@ -3,13 +3,19 @@
     padding: 0
 }
 
-body {
-background-image: url('https://files.123freevectors.com/wp-content/original/125424-orange-and-white-water-background.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
+body { 
+    background-image: url('Ygrad.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
+
+img{
+    border-radius: 8px;
+    width : 300px;
+    height : 200px;
+}
+
 .navbar {
     overflow: hidden;
     background-color: rgb(255, 201, 101); 
@@ -156,12 +162,6 @@ font-family: 'Numans', sans-serif;
 
 .item h4 {
     font-size: 1rem
-}
-.item img {
-    margin: 0 auto;
-    display: inherit;
-    width: 230px;
-    height: 164px
 }
 
 .overlay {
