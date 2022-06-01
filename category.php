@@ -26,9 +26,11 @@
     <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />-->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, { accordion: true });
+            var instances = M.Collapsible.init(elems, {
+                accordion: true
+            });
         });
     </script>
 
@@ -67,6 +69,10 @@
                 function logout() {
                     window.location.href = "index.html";
                 }
+
+                function set_cookie(val) {
+                    document.cookie = "category=" + val;
+                }
             </script>
         </div>
     </div>
@@ -75,65 +81,17 @@
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span> </div>
     <div class="navbar">
-        <a href="main_page.html">Home</a>
-        <a href="category.html">Computers</a>
-        <a href="category.html">Phones</a>
-        <a href="category.html">Photo Tech</a>
-        <a href="category.html">Sports</a>
-        <a href="category.html">TV/Audio</a>
-        <a href="category.html#Tool">Tools</a>
+        <a href="main_page.php">Home</a>
+        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
     <!--PRODUCT LIST-->
     <div class="row">
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Mobile</span> <span>Phones</span> </div>
-                <div> <img src="https://i.imgur.com/b9zkoz0.jpg" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Head</span> <span>Phones</span> </div>
-                <div> <img src="https://i.imgur.com/SHWASPG.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Watches</span> </div>
-                <div> <img src=" https://i.imgur.com/Ya0OXCv.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Air</span> <span>Purifiers</span> </div>
-                <div> <img src="https://i.imgur.com/2gvGwbh.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Vacuum</span> <span>Cleaners</span> </div>
-                <div> <img src="https://i.imgur.com/UMQJpSG.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Washing</span> <span>Machines</span> </div>
-                <div> <img src="https://i.imgur.com/e9CyhXR.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Televisions</span> </div>
-                <div> <img src=" https://i.imgur.com/Zq8VigZ.png" alt="item"  /> </div>
-            </div>
-        </div>
-        <div class="col sp3 item">
-            <div class="d-flex justify-content-between align-items-center p-2">
-                <div class="flex-column lh-1 imagename"> <span>Laptops</span> </div>
-                <div> <img src="https://i.imgur.com/6pK5oZl.jpg" alt="item"  /> </div>
-            </div>
-        </div>
-    </div>
+        <?php include "get_prod.php" ?>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
