@@ -94,71 +94,7 @@
         <br></br>
         <div class="container">
             <div class="row">
-
-                <!-- One item required for api call response configuration -->
-                <!-- -------------------------- -->
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>Asus Laptop with 500GB HDD 8GB RAM</h4>
-                        <p class="text-primary">$499</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- -------------------------- -->
-
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>DELL Laptop with 500GB HDD 8GB RAM</h4>
-                        <p class="text-primary">$599</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571751108/Ecommerce/laptop-dell-xps-15-computer-monitors-laptops.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>Asus Laptop with 1TB HDD 8GB RAM</h4>
-                        <p class="text-primary">$699</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>HP Laptop with 250GB HDD 4GB RAM</h4>
-                        <p class="text-primary">$399</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750391/Ecommerce/hp-17-x061nr-white-background.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>Asus Laptop with 500GB HDD 16GB RAM</h4>
-                        <p class="text-primary">$699</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750338/Ecommerce/Laptop-3.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sp3">
-                    <div class="item">
-                        <h4>DELL XPS with 500GB HDD 8GB RAM</h4>
-                        <p class="text-primary">$799</p>
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571751108/Ecommerce/laptop-dell-xps-15-computer-monitors-laptops.jpg" class="img-fluid" />
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="detail.html" class="btn btn-unique" data-abc="true">View Details</a>
-                        </div>
-                    </div>
-                </div>
+                <?php include "get_prod.php" ?>
             </div>
         </div>
 

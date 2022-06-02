@@ -81,7 +81,7 @@
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span> </div>
     <div class="navbar">
-        <a href="main_page.php">Home</a>
+        <a href="main_page.php" onclick="set_cookie('all');">Home</a>
         <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
         <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>

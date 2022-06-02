@@ -1,14 +1,30 @@
 <?php
 
 $curl = curl_init();
+$das_cookie = $_COOKIE['category'];
+$all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'TV_audioRead', 'ToolsRead'];
 
-curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$_COOKIE['category']}");
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-$output1 = curl_exec($curl);
+if ($das_cookie === 'all') {
 
-curl_close($curl);
+    for ($i = 0; $i < count($all_prod_arr); $i++) {
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $output1 = curl_exec($curl);
+        sendData($output1);
+    }
+    curl_close($curl);
+} else {
 
-sendData($output1);
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}");
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    $output1 = curl_exec($curl);
+
+    curl_close($curl);
+
+    sendData($output1);
+}
+
+
 
 function sendData($arr)
 {
@@ -23,7 +39,7 @@ function sendData($arr)
                 <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
                     alt='camera' class='img-fluid' />
                 <div class='overlay d-flex align-items-center justify-content-center'>
-                    <a href='detail.html' class='btn btn-unique' data-abc='true'>View Details</a>
+                    <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
                 </div>
             </div>
         </div>

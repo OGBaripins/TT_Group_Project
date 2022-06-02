@@ -13,6 +13,17 @@ About The API:
     Tools Table - localhost/{group_project_folder}/php_api/api/product/ToolsRead (GET)
     TV_audio Table - localhost/{group_project_folder}/php_api/api/product/TV_audioRead (GET)
 
+    Get single record functionality:
+
+    It is possible to get a single record from the database by providing the SKU code as a body in the request.
+
+    Get single record endpoint - localhost/{group_project_folder}/php_api/api/product/get_single
+
+    Sample body:
+    {
+        "sku":"LEC12345"
+    }
+
     Delete Function:
 
     Any item in the database can be deleted using a single endpoint.
