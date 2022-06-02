@@ -52,7 +52,7 @@
                             <li>Vodka</li>
                         </ul>
                         <br></br>
-                        <button type="button" class="submitBtn" onclick="goCheckOut()">Check out</button>
+                        <button type="button" class="" onclick="goCheckOut()">Check out</button>
                         <script>
                             function goCheckOut() {
                                 window.location.href = "checkOut.html";
@@ -62,7 +62,7 @@
                 </li>
             </ul>
             <div>
-            <button type="button" class="submitBtn" onclick="logout()">Logout</button>
+                <a class="text text-center waves-effect waves-light btn" onclick="logout()">Logout</a>
                 <script>
                     function logout() {
                         window.location.href = "index.html";
@@ -94,7 +94,7 @@
         <br></br>
         <div class="container">
             <div class="row">
-                <?php include "get_prod.php" ?>
+                one product
             </div>
         </div>
 
@@ -105,11 +105,3 @@
 </body>
 
 </html>
-
-<!-- 
-    Navbar +
-    Cart +
-    Popular product Container /+
-    Product Container
-    Category List 
--->

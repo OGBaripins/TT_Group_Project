@@ -16,7 +16,7 @@
 		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="signup_style.css">
+	<link rel="stylesheet" type="text/css" href="loginAndSingIn.css">
 </head>
 
 <body>
@@ -63,6 +63,11 @@
 									} else if (document.getElementById("password").value == "") {
 										alert("PLEASE INSERT A PASSWORD!");
                                     } else if (document.getElementById("email").value == "") {
+										alert("PLEASE INSERT AN EMAIL!");
+									} 									
+									if (document.getElementById("email").value == "") { // check @
+										alert("PLEASE INSERT AN EMAIL!");
+									} else if (document.getElementById("email").value == "") { // check .
 										alert("PLEASE INSERT AN EMAIL!");
 									} else {
 										window.location.href = "index.html";

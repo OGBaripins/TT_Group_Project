@@ -16,7 +16,7 @@
 		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="login_style.css">
+	<link rel="stylesheet" type="text/css" href="loginAndSingIn.css">
 </head>
 
 <body>
@@ -45,11 +45,11 @@
 							</div>
 							<input type="password" class="form-control" placeholder="password" id="password">
 						</div>
-						<div class="row align-items-center remember">
+						<div class="row remember">
 							<input type="checkbox">Remember Me
 						</div>
 						<div class="form-group">
-							<button type="button" class="" onclick="goMainPage()">Login</button>
+							<button type="button" class="submitBtn" onclick="goMainPage()">Login</button>
 							<script>
 								function goMainPage() {
 									if (document.getElementById("username").value == "") {
@@ -57,7 +57,7 @@
 									} else if (document.getElementById("password").value == "") {
 										alert("PLEASE INSERT A PASSWORD!");
 									} else {
-										window.location.href = "main_page.html";
+										window.location.href = "main_page.php";
 									}
 								}
 							</script>
@@ -70,11 +70,11 @@
 					</div>
 					<div class="d-flex justify-content-center links">
 						<a href="#" onclick="forgor()">Forgot your password?</a>
-							<script>
-								function forgor() {
-									alert("Too bad. You better remember it.");
-								}
-							</script>
+						<script>
+							function forgor() {
+								alert("Too bad. You better remember it.");
+							}
+						</script>
 					</div>
 				</div>
 			</div>

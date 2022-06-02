@@ -55,26 +55,22 @@ input:focus {
   box-shadow: 0 0 0 0 !important;
 }
 
-.remember {
-  color: white;
-}
-
-.remember input {
-  width: 20px;
-  height: 20px;
-  margin-left: 15px;
-  margin-right: 5px;
-}
-
-.login_btn {
-  color: black;
+.submitBtn {
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
   background-color: #ff9812;
-  width: 100px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
 }
 
-.login_btn:hover {
-  color: black;
-  background-color: white;
+.submitBtn:hover {
+  background-color: #f5cf9e;
+  transform: translateY(-1px);
 }
 
 .links {
@@ -82,5 +78,11 @@ input:focus {
 }
 
 .links a {
+  margin-left: 4px;
+  color: orange;
+}
+
+.remember {
+  color: white;
   margin-left: 4px;
 }
