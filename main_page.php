@@ -30,6 +30,14 @@
                 accordion: true
             });
         });
+        
+        function logout() {
+            window.location.href = "index.html";
+        }
+
+        function set_cookie(val) {
+            document.cookie = "category=" + val;
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -40,6 +48,11 @@
 <body>
     <!--TOP BAR-->
     <div class="row" id="TopBar">
+        <div class="col right">
+            <div>
+                <button type="button" class="submitBtn" onclick="logout()">Logout</button>
+            </div>
+        </div>
         <div class="col right">
             <ul class="collapsible">
                 <li>
@@ -55,61 +68,42 @@
                         <button type="button" class="submitBtn" onclick="goCheckOut()">Check out</button>
                         <script>
                             function goCheckOut() {
-                                window.location.href = "checkOut.html";
+                                window.location.href = "checkOut.php";
                             }
                         </script>
                     </div>
                 </li>
             </ul>
-            <div>
-            <button type="button" class="submitBtn" onclick="logout()">Logout</button>
-                <script>
-                    function logout() {
-                        window.location.href = "index.html";
-                    }
-
-                    function set_cookie(val) {
-                        document.cookie = "category=" + val;
-                    }
-                </script>
-            </div>
         </div>
-        <!--CATEGORY BAR-->
-        <div class="logo-text"> <span class="text text-center">
-                <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
-            </span> </div>
-        <div class="navbar">
-            <a href="main_page.php">Home</a>
-            <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
-            <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
-            <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
-            <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
-            <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
-            <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+    </div>
+    <div class="logo-text">
+        <span class="text text-center">
+            <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
+        </span>
+    </div>
+    <!--CATEGORY BAR-->
+    <div class="navbar">
+        <a href="main_page.php">Home</a>
+        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+    </div>
+
+
+    <div style="padding:0 16px"></div>
+    <br></br>
+    <br></br>
+    <div class="container">
+        <div class="row">
+            <?php include "get_prod.php" ?>
         </div>
+    </div>
 
-
-        <div style="padding:0 16px"></div>
-        <br></br>
-        <br></br>
-        <div class="container">
-            <div class="row">
-                <?php include "get_prod.php" ?>
-            </div>
-        </div>
-
-
-        <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
-
 </html>
-
-<!-- 
-    Navbar +
-    Cart +
-    Popular product Container /+
-    Product Container
-    Category List 
--->
