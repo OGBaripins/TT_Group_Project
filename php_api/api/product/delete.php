@@ -12,9 +12,18 @@ include_once "../../models/Photo_tech.php";
 include_once "../../models/Sports.php";
 include_once "../../models/Tools.php";
 include_once "../../models/TV_audio.php";
+include_once "../../models/Users.php";
 
 //Finding a String with SKU code
 $body = file_get_contents('php://input');
+
+if (preg_match('/"username".*/', $body, $matches)) {
+    $database = new Database();
+    $db = $database->connect();
+    deleteUserData(new Users($db));
+    return;
+}
+
 preg_match('/"sku".*/', $body, $matches);
 
 $matchStr = $matches[0];
@@ -82,8 +91,6 @@ function checkDatabase($code)
 //Data removing function
 function deleteData($product)
 {
-
-
     $data = json_decode(file_get_contents("php://input"));
 
     $product->sku = $data->sku;
@@ -95,6 +102,23 @@ function deleteData($product)
     } else {
         echo json_encode(
             array("Product was not removed")
+        );
+    }
+}
+
+function deleteUserData($user)
+{
+    $data = json_decode(file_get_contents("php://input"));
+
+    $user->username = $data->username;
+
+    if ($user->delete()) {
+        echo json_encode(
+            array("User removed")
+        );
+    } else {
+        echo json_encode(
+            array("User was not removed")
         );
     }
 }

@@ -12,10 +12,19 @@ include_once "../../models/Photo_tech.php";
 include_once "../../models/Sports.php";
 include_once "../../models/Tools.php";
 include_once "../../models/TV_audio.php";
+include_once "../../models/Users.php";
 
 
 //Finding a String with SKU code
 $body = file_get_contents('php://input');
+
+if (preg_match('/"username".*/', $body, $matches)) {
+    $database = new Database();
+    $db = $database->connect();
+    putUserData(new Users($db));
+    return;
+}
+
 preg_match('/"sku".*/', $body, $matches);
 
 $matchStr = $matches[0];
@@ -82,6 +91,20 @@ function putData($product)
     $product->image_path = $data->image_path;
 
     if ($product->create()) {
+        return;
+    }
+}
+
+function putUserData($user)
+{
+
+    $data = json_decode(file_get_contents("php://input"));
+
+    $user->username = $data->username;
+    $user->passwd = $data->passwd;
+    $user->e_mail = $data->e_mail;
+
+    if ($user->create()) {
         return;
     }
 }
