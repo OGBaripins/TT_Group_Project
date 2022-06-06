@@ -57,7 +57,7 @@
     <div class="row" id="TopBar">
         <div class="col right">
             <div>
-                <button type="button" class="submitBtn" onclick="logout()">Logout</button>
+                <button type="button" class="actionButton" onclick="logout()">Logout</button>
             </div>
         </div>
         <div class="col right">
@@ -72,7 +72,7 @@
                             <li>Vodka</li>
                         </ul>
                         <br></br>
-                        <button type="button" class="submitBtn" onclick="goCheckOut()">Check out</button>
+                        <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
                     </div>
                 </li>
             </ul>

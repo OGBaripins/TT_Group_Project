@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `tt_project`
 --
-
+CREATE DATABASE IF NOT EXISTS `tt_project` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `tt_project`;
 -- --------------------------------------------------------
 
 --
@@ -37,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `computers` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `computers`
@@ -75,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `phone` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `phone`
@@ -107,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `photo_tech` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `photo_tech`
@@ -139,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `sports` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `sports`
@@ -171,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `tools` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tools`
@@ -205,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `tv_audio` (
   `sku` varchar(8) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sku` (`sku`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tv_audio`
@@ -239,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `e_mail` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`username`,`e_mail`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
