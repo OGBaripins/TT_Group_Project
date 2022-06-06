@@ -141,3 +141,24 @@ img {
   background-color: #f5cf9e;
   transform: translateY(-1px);
 }
+.actionBuyButton {
+  display: block;
+  margin-left: left;
+  padding: 15px 34px;
+  border: none;
+  background-color: #ff9812;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 21%;
+}
+
+.actionBuyButton:hover {
+  background-color: #f5cf9e;
+  transform: translateY(-1px);
+}
+.price-wrap{
+  margin-left: left;
+  padding: 1px 28px;
+}

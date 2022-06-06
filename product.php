@@ -11,7 +11,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    
 
     <title>Main page</title>
 
@@ -108,9 +108,17 @@
                     <tr><td>Stats:</td></tr>
                     <tr><td>500GB HDD storage <br> 8GB RAM</td></tr>
                 </table>
+                <br>
+				<a href="category.php" class="actionBuyButton" data-abc="true"> Buy now </a>
+				<div class="price-wrap">
+					<small class="text-success">(Free shipping)</small>
+				
+			</div> 
+            
             </div>
         </div>
     </div>
+    
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
