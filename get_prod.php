@@ -7,7 +7,7 @@ $all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'T
 if ($das_cookie === 'all') {
 
     for ($i = 0; $i < count($all_prod_arr); $i++) {
-        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}");
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output1 = curl_exec($curl);
         sendData($output1);
@@ -15,7 +15,7 @@ if ($das_cookie === 'all') {
     curl_close($curl);
 } else {
 
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}");
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $output1 = curl_exec($curl);
 
@@ -55,4 +55,24 @@ function sendData($arr)
         //     <td>{$arr['data'][$i]['image_path']}</td>
         // </tr>";
     }
+}
+
+function checkUsers($username, $passwd)
+{
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/UsersRead.php");
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    $output1 = curl_exec($curl);
+
+    curl_close($curl);
+
+    $arr = json_decode($output1, true);
+
+    for ($i = 0; $i < count($arr['data']); $i++) {
+        echo ($i['data']);
+        if ($username == $arr['data'][$i]['username'] && $passwd == $arr['data'][$i]['passwd']) {
+            header("Location: http://localhost/TT_Group_Project/TT_Group_Project/main_page.php");
+        }
+    }
+    header("Location: http://localhost/TT_Group_Project/TT_Group_Project/index.php");
 }

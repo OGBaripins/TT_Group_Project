@@ -9,6 +9,18 @@ body {
   font-family: "Numans", sans-serif;
 }
 
+.err-message{
+    font-family: Verdana;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    color: #e60000;
+}
+
 .container {
   height: 100%;
   align-content: center;
