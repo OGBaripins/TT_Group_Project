@@ -7,7 +7,11 @@ $all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'T
 if ($das_cookie === 'all') {
 
     for ($i = 0; $i < count($all_prod_arr); $i++) {
+<<<<<<< HEAD
         curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
+=======
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
+>>>>>>> 25feb6efc5a96347c958c52e044d41bc8180640b
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output1 = curl_exec($curl);
         sendData($output1);
@@ -15,7 +19,11 @@ if ($das_cookie === 'all') {
     curl_close($curl);
 } else {
 
+<<<<<<< HEAD
     curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
+=======
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
+>>>>>>> 25feb6efc5a96347c958c52e044d41bc8180640b
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $output1 = curl_exec($curl);
 
@@ -29,20 +37,25 @@ if ($das_cookie === 'all') {
 function sendData($arr)
 {
     $arr = json_decode($arr, true);
-
     for ($i = 0; $i < count($arr['data']); $i++) {
         echo ("
-        <div class='col sp3 item'>
-            <div class='d-flex justify-content-between align-items-center p-2'>
-                <h4>{$arr['data'][$i]['name']}</h4>
-                <p class='text-primary'>{$arr['data'][$i]['price']}</p>
-                <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
-                    alt='camera' class='img-fluid' />
-                <div class='overlay d-flex align-items-center justify-content-center'>
-                    <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
-                </div>
+        <div class='col sp1 item'>
+        <div class='overlay'>
+                <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
             </div>
+            <div>
+                <table class='margin-bottom '>
+                    <tr>
+                    <td>{$arr['data'][$i]['name']}</td>
+                    <td><p>{$arr['data'][$i]['price']}$</p></td>
+                    </tr>
+                </table>
+                <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
+                    class='img-fluid' />
+            </div>
+            
         </div>
+        
         ");
         // echo "
         // <tr>

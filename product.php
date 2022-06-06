@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="page_style.css" />
+    <link rel="stylesheet" type="text/css" href="productPage_style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -54,7 +54,7 @@
     <div class="row" id="TopBar">
         <div class="col right">
             <div>
-                <button type="button" class="submitBtn" onclick="logout()">Logout</button>
+                <button type="button" class="actionButton" onclick="logout()">Logout</button>
             </div>
         </div>
         <div class="col right">
@@ -69,7 +69,7 @@
                             <li>Vodka</li>
                         </ul>
                         <br></br>
-                        <button type="button" class="submitBtn" onclick="goCheckOut()">Check out</button>
+                        <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
                     </div>
                 </li>
             </ul>
@@ -94,9 +94,21 @@
     <div style="padding:0 16px"></div>
     <br></br>
     <br></br>
-    <div class="container">
+    <div class="container"> <!--PRODUCT-->
         <div class="row">
-            one product
+            <div class="col s5">
+                <!--Item-->
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
+                    alt="item" class="img-fluid" />
+            </div>
+            <div class="col s6 descriptionBox">
+                <table>
+                    <tr><td>Asus Laptop</h3><td></tr>
+                    <tr><td>Price: $499</td></tr>
+                    <tr><td>Stats:</td></tr>
+                    <tr><td>500GB HDD storage <br> 8GB RAM</td></tr>
+                </table>
+            </div>
         </div>
     </div>
 
