@@ -60,7 +60,7 @@
         <div class="col right">
             <ul class="collapsible">
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">shopping_cart</i>Cart</div>
+                    <div class="collapsible-header"><i class="material-icons">shopping_cart</i></div>
                     <div class="collapsible-body">
                         <ul>
                             <li>Baseball bat</li>

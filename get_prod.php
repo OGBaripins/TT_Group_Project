@@ -32,18 +32,22 @@ function sendData($arr)
     for ($i = 0; $i < count($arr['data']); $i++) {
         echo ("
         <div class='col sp1 item'>
-            <table class='highlight margin-bottom '>
-                <tr>
-                <td>{$arr['data'][$i]['name']}</td>
-                <td><p>{$arr['data'][$i]['price']}$</p></td>
-                </tr>
-            </table>
-            <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
-                class='img-fluid' />
-            <div class='overlay d-flex align-items-center justify-content-center'>
+        <div class='overlay'>
                 <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
             </div>
+            <div>
+                <table class='margin-bottom '>
+                    <tr>
+                    <td>{$arr['data'][$i]['name']}</td>
+                    <td><p>{$arr['data'][$i]['price']}$</p></td>
+                    </tr>
+                </table>
+                <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
+                    class='img-fluid' />
+            </div>
+            
         </div>
+        
         ");
         // echo "
         // <tr>
