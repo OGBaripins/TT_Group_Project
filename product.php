@@ -94,20 +94,20 @@
     <div style="padding:0 16px"></div>
     <br></br>
     <br></br>
-    <div class="container">
+    <div class="container"> <!--PRODUCT-->
         <div class="row">
             <div class="col s5">
                 <!--Item-->
                 <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
                     alt="item" class="img-fluid" />
             </div>
-            <div class="col s6">
-                <div class="right descriptionBox">
-                <h3>Asus Laptop</h3><br>
-                <h4>Price: $499</h4>
-                <h4>Stats:</h4>
-                <h5>500GB HDD storage <br> 8GB RAM</h5>
-                <div>
+            <div class="col s6 descriptionBox">
+                <table>
+                    <tr><td>Asus Laptop</h3><td></tr>
+                    <tr><td>Price: $499</td></tr>
+                    <tr><td>Stats:</td></tr>
+                    <tr><td>500GB HDD storage <br> 8GB RAM</td></tr>
+                </table>
             </div>
         </div>
     </div>

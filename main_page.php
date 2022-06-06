@@ -91,8 +91,6 @@
         <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
 
-
-    <div style="padding:0 16px"></div>
     <br></br>
     <br></br>
     <div class="container">

@@ -29,18 +29,19 @@ if ($das_cookie === 'all') {
 function sendData($arr)
 {
     $arr = json_decode($arr, true);
-
     for ($i = 0; $i < count($arr['data']); $i++) {
         echo ("
-        <div class='col sp3 item'>
-            <div class='d-flex justify-content-between align-items-center p-2'>
-                <h4>{$arr['data'][$i]['name']}</h4>
-                <p class='text-primary'>{$arr['data'][$i]['price']}</p>
-                <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
-                    alt='camera' class='img-fluid' />
-                <div class='overlay d-flex align-items-center justify-content-center'>
-                    <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
-                </div>
+        <div class='col sp1 item'>
+            <table class='highlight margin-bottom '>
+                <tr>
+                <td>{$arr['data'][$i]['name']}</td>
+                <td><p>{$arr['data'][$i]['price']}$</p></td>
+                </tr>
+            </table>
+            <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
+                class='img-fluid' />
+            <div class='overlay d-flex align-items-center justify-content-center'>
+                <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
             </div>
         </div>
         ");

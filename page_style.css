@@ -12,7 +12,7 @@ body {
 
 img {
   border-radius: 8px;
-  width: 300px;
+  width: 280px;
   height: 200px;
 }
 
@@ -121,24 +121,6 @@ img {
   font-size: 13px;
 }
 
-.btn {
-  font-weight: 400;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  -webkit-transition: color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-    -webkit-box-shadow 0.15s ease-in-out;
-}
 
 .text {
   font-size: 23px;
@@ -158,14 +140,17 @@ img {
 }
 
 .item {
-  background: #fff;
+  background: #ff9812;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  margin-right: 20px;
   overflow: hidden;
   position: relative;
+  width: 300px;
   height: 300px;
+  border-radius: 16px;
 }
 
 .item h4 {
@@ -175,18 +160,15 @@ img {
 .overlay {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.92);
-  opacity: 0;
+  position: bottom;
+  opacity: 0.0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .overlay a {
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

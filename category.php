@@ -94,8 +94,12 @@
         <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
     <!--PRODUCT LIST-->
-    <div class="row">
-        <?php include "get_prod.php" ?>
+    <br></br>
+    <br></br>
+    <div class="container">
+        <div class="row">
+            <?php include "get_prod.php" ?>
+        </div>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
