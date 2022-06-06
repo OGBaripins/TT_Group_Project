@@ -32,6 +32,18 @@
                 accordion: true
             });
         });
+
+        function logout() {
+            window.location.href = "index.html";
+        }
+
+        function goCheckOut() {
+            window.location.href = "checkOut.php";
+        }
+
+        function set_cookie(val) {
+            document.cookie = "category=" + val;
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -61,11 +73,6 @@
                         </ul>
                         <br></br>
                         <button type="button" class="submitBtn" onclick="goCheckOut()">Check out</button>
-                        <script>
-                            function goCheckOut() {
-                                window.location.href = "checkOut.php";
-                            }
-                        </script>
                     </div>
                 </li>
             </ul>
