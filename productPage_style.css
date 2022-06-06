@@ -110,6 +110,7 @@ img {
 .overlay a {
   -webkit-transform: translateY(20px);
   transform: translateY(20px);
+  background-color: #00ff40;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
