@@ -7,11 +7,7 @@ $all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'T
 if ($das_cookie === 'all') {
 
     for ($i = 0; $i < count($all_prod_arr); $i++) {
-<<<<<<< HEAD
-        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
-=======
-        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
->>>>>>> 25feb6efc5a96347c958c52e044d41bc8180640b
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output1 = curl_exec($curl);
         sendData($output1);
@@ -19,11 +15,7 @@ if ($das_cookie === 'all') {
     curl_close($curl);
 } else {
 
-<<<<<<< HEAD
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
-=======
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
->>>>>>> 25feb6efc5a96347c958c52e044d41bc8180640b
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $output1 = curl_exec($curl);
 
@@ -41,10 +33,10 @@ function sendData($arr)
         echo ("
         <div class='col sp1 item'>
         <div class='overlay'>
-                <a href='product.php' class='btn btn-unique' data-abc='true'>View Details</a>
+                <a href='product.php' class='btn btn-unique' onclick=\"set_product_cookie('{$arr['data'][$i]['sku']}');\"> {$arr['data'][$i]['sku']}</a>
             </div>
             <div>
-                <table class='margin-bottom '>
+                <table class='margin-bottom'>
                     <tr>
                     <td>{$arr['data'][$i]['name']}</td>
                     <td><p>{$arr['data'][$i]['price']}$</p></td>
@@ -55,7 +47,6 @@ function sendData($arr)
             </div>
             
         </div>
-        
         ");
         // echo "
         // <tr>
@@ -68,24 +59,4 @@ function sendData($arr)
         //     <td>{$arr['data'][$i]['image_path']}</td>
         // </tr>";
     }
-}
-
-function checkUsers($username, $passwd)
-{
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/UsersRead.php");
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    $output1 = curl_exec($curl);
-
-    curl_close($curl);
-
-    $arr = json_decode($output1, true);
-
-    for ($i = 0; $i < count($arr['data']); $i++) {
-        echo ($i['data']);
-        if ($username == $arr['data'][$i]['username'] && $passwd == $arr['data'][$i]['passwd']) {
-            header("Location: http://localhost/TT_Group_Project/TT_Group_Project/main_page.php");
-        }
-    }
-    header("Location: http://localhost/TT_Group_Project/TT_Group_Project/index.php");
 }

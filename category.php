@@ -24,7 +24,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />-->
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
@@ -54,30 +53,7 @@
 
 <body>
     <!--TOP BAR-->
-    <div class="row" id="TopBar">
-        <div class="col right">
-            <div>
-                <button type="button" class="actionButton" onclick="logout()">Logout</button>
-            </div>
-        </div>
-        <div class="col right">
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">shopping_cart</i>Cart</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Baseball bat</li>
-                            <li>Zhiguli</li>
-                            <li>Semki</li>
-                            <li>Vodka</li>
-                        </ul>
-                        <br></br>
-                        <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <?php require 'side_cart.php' ?>
     <div class="logo-text">
         <span class="text text-center">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
@@ -85,7 +61,7 @@
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php">Home</a>
+        <a href="main_page.php" onclick="set_cookie('all');"> Home</a>
         <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
         <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>

@@ -1,3 +1,5 @@
+<?php require_once('cart_script.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
 
     <title>Main page</title>
 
@@ -41,6 +43,11 @@
 
         function set_cookie(val) {
             document.cookie = "category=" + val;
+        }
+
+        function set_product_cookie(val) {
+            document.cookie = "product=" + val;
+            console.log("product=" + val)
         }
     </script>
 
@@ -94,31 +101,11 @@
     <div style="padding:0 16px"></div>
     <br></br>
     <br></br>
-    <div class="container"> <!--PRODUCT-->
-        <div class="row">
-            <div class="col s5">
-                <!--Item-->
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                    alt="item" class="img-fluid" />
-            </div>
-            <div class="col s6 descriptionBox">
-                <table>
-                    <tr><td>Asus Laptop</h3><td></tr>
-                    <tr><td>Price: $499</td></tr>
-                    <tr><td>Stats:</td></tr>
-                    <tr><td>500GB HDD storage <br> 8GB RAM</td></tr>
-                </table>
-                <br>
-				<a href="category.php" class="actionBuyButton" data-abc="true"> Buy now </a>
-				<div class="price-wrap">
-					<small class="text-success">(Free shipping)</small>
-				
-			</div> 
-            
-            </div>
-        </div>
+    <div class="container">
+        <!--PRODUCT-->
+        <?php displayProd() ?>
     </div>
-    
+
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>

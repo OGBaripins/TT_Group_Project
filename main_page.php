@@ -12,7 +12,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
     <title>Main page</title>
 
     <link href="css/prism.css" rel="stylesheet">
@@ -22,7 +21,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
@@ -30,7 +28,7 @@
                 accordion: true
             });
         });
-        
+
         function logout() {
             window.location.href = "index.html";
         }
@@ -42,6 +40,13 @@
         function set_cookie(val) {
             document.cookie = "category=" + val;
         }
+
+        function set_product_cookie(val) {
+            document.cookie = "product=" + val;
+        }
+
+        set_cookie('all');
+        //set_product_cookie('cum')
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -51,30 +56,7 @@
 
 <body>
     <!--TOP BAR-->
-    <div class="row" id="TopBar">
-        <div class="col right">
-            <div>
-                <button type="button" class="actionButton" onclick="logout()">Logout</button>
-            </div>
-        </div>
-        <div class="col right">
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">shopping_cart</i></div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Baseball bat</li>
-                            <li>Zhiguli</li>
-                            <li>Semki</li>
-                            <li>Vodka</li>
-                        </ul>
-                        <br></br>
-                        <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <?php require 'side_cart.php' ?>
     <div class="logo-text">
         <span class="text text-center">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
@@ -103,4 +85,5 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
+
 </html>
