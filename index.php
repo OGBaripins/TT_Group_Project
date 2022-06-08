@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="loginAndSingIn.css">
+    <link rel="stylesheet" type="text/css" href="cssFiles/loginAndSingIn.css">
 </head>
 
 <body>
@@ -51,23 +51,24 @@
                             <?php
                             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if (empty($_POST['username'])) {
-                                    // echo "<script>console.log('Debug Objects: " . $_POST['username'] . "' );</script>";
-                                    echo '<h4 class="err-message">Username or Password was incorrect<h4>';
+                                    echo '<h4 class="err-message text-center">ENTER A USERNAME!<h4>';
                                 } else if (empty($_POST['password'])) {
-                                    echo '<h4 class="err-message">Username or Password was incorrect<h4>';
+                                    echo '<h4 class="err-message text-center">ENTER A PASSWORD<h4>';
                                 } else {
                                     $curl = curl_init();
-                                    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/UsersRead.php");
+                                    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/UsersRead.php");
                                     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
                                     $output1 = curl_exec($curl);
                                     curl_close($curl);
                                     $arr = json_decode($output1, true);
                                     for ($i = 0; $i < count($arr['data']); $i++) {
                                         if ($_POST['username'] == $arr['data'][$i]['username'] && $_POST['password'] == $arr['data'][$i]['passwd']) {
-                                            header("Location: http://localhost/TT_Group_Project/TT_Group_Project/main_page.php");
+                                            header("Location: http://localhost/TT_Group_Project/main_page.php");
+                                            $_COOKIE['category'] = "all";
                                             return;
                                         }
                                     }
+                                    echo '<h4 class="err-message text-center">INCORRECT LOGIN!<h4>';
                                 }
                             }
                             ?>
@@ -76,7 +77,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="signup_page.html" onclick="">Sign Up</a>
+                        Don't have an account?<a href="signup_page.php" onclick="">Sign Up</a>
                     </div>
                     <div class="d-flex justify-content-center links">
                         <a href="#" onclick="forgor()">Forgot your password?</a>

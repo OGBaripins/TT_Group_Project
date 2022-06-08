@@ -7,23 +7,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="productPage_style.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/productPage_style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
     <title>Main page</title>
 
-    <link href="css/prism.css" rel="stylesheet">
-    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -32,10 +28,6 @@
                 accordion: true
             });
         });
-
-        function logout() {
-            window.location.href = "index.html";
-        }
 
         function goCheckOut() {
             window.location.href = "checkOut.php";
@@ -48,6 +40,10 @@
         function set_product_cookie(val) {
             document.cookie = "product=" + val;
             console.log("product=" + val)
+        }
+
+        function logout() {
+            window.location.href = "index.php";
         }
     </script>
 
@@ -63,23 +59,6 @@
             <div>
                 <button type="button" class="actionButton" onclick="logout()">Logout</button>
             </div>
-        </div>
-        <div class="col right">
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">shopping_cart</i>Cart</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Baseball bat</li>
-                            <li>Zhiguli</li>
-                            <li>Semki</li>
-                            <li>Vodka</li>
-                        </ul>
-                        <br></br>
-                        <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
-                    </div>
-                </li>
-            </ul>
         </div>
     </div>
     <div class="logo-text">
@@ -103,12 +82,8 @@
     <br></br>
     <div class="container">
         <!--PRODUCT-->
-        <?php displayProd() ?>
+        <?php include "get_prod.php" ?>
     </div>
-
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
 

@@ -1,3 +1,9 @@
+<script>
+    function logout() {
+        window.location.href = "index.php";
+    }
+</script>
+
 <div class="row" id="TopBar">
     <div class="col right">
         <div>
@@ -12,7 +18,6 @@
                     <ul>
                         <?php include("cart_script.php") ?>
                     </ul>
-
                     <br></br>
                     <button type="button" class="actionButton" onclick="goCheckOut()">Check out</button>
                 </div>

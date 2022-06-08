@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("Ygrad.png");
+  background-image: url("../bgPictures/Ygrad.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -163,7 +163,6 @@ img {
 .overlay {
   width: 100%;
   position: bottom;
-  
   opacity: 0.0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -171,8 +170,8 @@ img {
 
 .overlay a {
   background-color: #ff1212;
-  -webkit-transform: translateY(-20px);
-  transform: translateY(-20px);
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
@@ -184,9 +183,6 @@ img {
 
 .btn-dark {
   border-radius: 50px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-  margin-bottom: 10px;
 }
 
 .btn-unique {

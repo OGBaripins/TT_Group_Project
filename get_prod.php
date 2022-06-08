@@ -32,11 +32,9 @@ function sendData($arr)
     for ($i = 0; $i < count($arr['data']); $i++) {
         echo ("
         <div class='col sp1 item'>
-        <div class='overlay'>
-                <a href='product.php' class='btn btn-unique' onclick=\"set_product_cookie('{$arr['data'][$i]['sku']}');\"> {$arr['data'][$i]['sku']}</a>
-            </div>
+            
             <div>
-                <table class='margin-bottom'>
+                <table>
                     <tr>
                     <td>{$arr['data'][$i]['name']}</td>
                     <td><p>{$arr['data'][$i]['price']}$</p></td>
@@ -44,6 +42,9 @@ function sendData($arr)
                 </table>
                 <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
                     class='img-fluid' />
+            </div>
+            <div class='overlay'>
+                <a href='product.php' class='btn btn-unique' onclick=\"set_product_cookie('{$arr['data'][$i]['sku']}');\"> {$arr['data'][$i]['sku']}</a>
             </div>
         </div>
         ");

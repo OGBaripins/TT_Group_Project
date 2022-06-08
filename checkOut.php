@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="page_style.css" />
-    <link href="css/prism.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssFiles/page_style.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <title>Main page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.collapsible');
             var instances = M.Collapsible.init(elems, { accordion: true });
         });
-
-        function logout() {
-            window.location.href = "index.html";
-        }
-
         function set_cookie(val) {
             document.cookie = "category=" + val;
         }
@@ -36,13 +38,7 @@
 
 <body>
     <!--TOP BAR-->
-    <div class="row" id="TopBar">
-        <div class="col right">
-            <div>
-                <button type="button" class="actionButton" onclick="logout()">Logout</button>
-            </div>
-        </div>
-    </div>
+    <?php require 'side_cart.php' ?>
     <div class="logo-text">
         <span class="text text-center">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
@@ -117,6 +113,7 @@
                 alt="item" class="img-fluid" />
         </div>
     </div>
+    
 </body>
 
 </html>

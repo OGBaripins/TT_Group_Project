@@ -2,7 +2,7 @@
 
 html,
 body {
-  background-image: url("https://files.123freevectors.com/wp-content/original/125424-orange-and-white-water-background.jpg");
+  background-image: url("../bgPictures/wetOrange.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -11,14 +11,14 @@ body {
 
 .err-message{
     font-family: Verdana;
-    font-size: 12px;
+    font-size: 16px;
     font-style: italic;
     font-weight: normal;
     text-decoration: none;
     text-transform: none;
     font-variant: small-caps;
     letter-spacing: 3px;
-    height: 2+px;
+    background-color: #000000;
     color: #e60000;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .card {
-  height: 370px;
+  height: 400px;
   margin-top: auto;
   margin-bottom: auto;
   width: 400px;
