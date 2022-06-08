@@ -43,7 +43,7 @@
 
 <body>
     <!--TOP BAR-->
-    
+    <?php require 'side_cart.php' ?>
     <div class="logo-text">
         <span class="text text-center">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
