@@ -58,24 +58,24 @@
     <div class="row" id="TopBar">
         <div class="col right">
             <div>
-                <button type="button" class="actionButton" onclick="logout()">Logout</button>
+                <button type="button" class="actionButton normalText-small" onclick="logout()">Logout</button>
             </div>
         </div>
     </div>
     <div class="logo-text">
-        <span class="text text-center">
+        <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span>
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php" onclick="set_cookie('all');">Home</a>
-        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
-        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
-        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
-        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
-        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
-        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+        <a class="normalText-small" href="main_page.php" onclick="set_cookie('all');">Home</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
 
     <div style="padding:0 16px"></div>

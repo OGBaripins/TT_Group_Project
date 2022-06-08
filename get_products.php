@@ -61,7 +61,7 @@ function sendData($arr)
                             <br>
                             <a class='actionBuyButton' onclick='buyProduct(\"{$arr['data'][$i]['sku']}\", \"{$_COOKIE['cart']}\")'> Buy now </a>
                             <div class='price-wrap'>
-                                <small class='text-center'>(Free shipping)</small>
+                                <small class='text-center normalText-small'>(Free shipping)</small>
                             </div>
                     </div>
                 ");
@@ -111,12 +111,5 @@ function sendData($arr)
             }
         }
         // product data : id; name; sku; price; quantity; image_path;
-    }
-    if ($_COOKIE['category'] == 'cart'){
-        echo ("
-            <div class='col sp1'>
-                <h1>Yes</h1>
-            </div>
-        ");
     }
 }

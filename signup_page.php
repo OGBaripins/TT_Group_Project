@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Sign Up</h3>
+                    <h3 class="normalText-big">Sign Up</h3>
                     <div class="d-flex justify-content-end social_icon">
                         <span><i class="fab fa-facebook-square"></i></span>
                         <span><i class="fab fa-google-plus-square"></i></span>
@@ -64,28 +64,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="username" placeholder="username" id="username">
+                            <input type="text" class="form-control normalText-small" name="username" placeholder="username" id="username">
 
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" name="password" placeholder="password" id="password">
+                            <input type="password" class="form-control normalText-small" name="password" placeholder="password" id="password">
                         </div>
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="email" placeholder="email" id="email">
+                            <input type="text" class="form-control normalText-small" name="email" placeholder="email" id="email">
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="submitBtn">Sign up</button>
+                            <button type="submit" class="submitBtn normalText-medium"">Sign up</button>
                             <h4 <?php if ($isHidden) {
                                     echo "hidden";
-                                } ?> class="err-message">Username/Password/e-mail was not provided<h4>
+                                } ?> class=" err-message normalText-medium">Username/Password/e-mail was not provided<h4>
                                     <!-- <script>
                                 function goMainPage() {
                                     if (document.getElementById("username").value == "") {
