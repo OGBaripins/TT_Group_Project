@@ -27,6 +27,11 @@
         function set_cookie(val) {
             document.cookie = "category=" + val;
         }
+
+        function buyItems() {
+            document.cookie = "cart=";
+            window.location.href = "checkOut.php";
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,7 +51,7 @@
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php">Home</a>
+        <a href="main_page.php" onclick="set_cookie('all');">Home</a>
         <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
         <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
@@ -55,64 +60,17 @@
         <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
     <!--ITEM LIST-->
-    <div class="row" id="ContentBar">
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
+    <br>
+    <br>
+    <div class="container">
+        <div class="row" id="ContentBar">
+            <?php include "get_products.php"?>
         </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
-        </div>
-        <div class="col s3">
-            <!--Item-->
-            <h5>Asus Laptop with 500GB HDD 8GB RAM</h5>
-            <p class="text-primary">$499</p>
-            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"
-                alt="item" class="img-fluid" />
+        <div class="row" id="ContentBar">
+            <button type="button" class="actionButton" onclick="buyItems()">Purchase Items</button>
         </div>
     </div>
+    
     
 </body>
 

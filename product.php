@@ -83,8 +83,8 @@
     <br></br>
     <div class="container">
         <div class="row">
-        <!--PRODUCT-->
-        <?php include "get_products.php" ?>
+            <!--PRODUCT-->
+            <?php include "get_products.php" ?>
         </div>
     </div>
 

@@ -26,10 +26,6 @@
             });
         });
 
-        function goCheckOut() {
-            window.location.href = "checkOut.php";
-        }
-
         function set_cookie(val) {
             document.cookie = "category=" + val;
         }

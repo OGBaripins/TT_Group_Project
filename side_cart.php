@@ -2,6 +2,11 @@
     function logout() {
         window.location.href = "index.php";
     }
+
+    function goCheckOut() {
+        document.cookie = "category=cart";
+        window.location.href = "checkOut.php";
+    }
 </script>
 
 <div class="row" id="TopBar">
