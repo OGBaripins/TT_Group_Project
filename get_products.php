@@ -48,17 +48,11 @@ function sendData($arr)
                 <div class='col sp1 right descriptionBox'>
                     <div class='row'>
                         <div>
-                            <table>
-                                <tr>
-                                <td>{$arr['data'][$i]['name']}</td>
-                                </tr>
-                                <tr>
-                                <td><p>Price: {$arr['data'][$i]['price']}$</p></td>
-                                </tr>
-                                <tr>
-                                <td><p>Quantity: {$arr['data'][$i]['quantity']}</p></td>
-                                </tr>
-                            </table>
+                            <h3>{$arr['data'][$i]['name']}</h3>
+                            <br>
+                            <h5>Price: {$arr['data'][$i]['price']}$</h5>
+                            <br>
+                            <h5>Quantity: {$arr['data'][$i]['quantity']}</h5>
                         </div>
                     </div>
                     <br>
@@ -92,15 +86,6 @@ function sendData($arr)
             </div>
             ");
         }
-        // echo "
-        // <tr>
-        //     <td>{$arr['data'][$i]['id']}</td>
-        //     <td>{$arr['data'][$i]['name']}</td>
-        //     <td>{$arr['data'][$i]['sku']}</td>
-        //     <td>{$arr['data'][$i]['price']}</td>
-        //     <td>{$arr['data'][$i]['quantity']}</td>
-        //     <td>{$arr['data'][$i]['sku']}</td>
-        //     <td>{$arr['data'][$i]['image_path']}</td>
-        // </tr>";
+        // product data : id; name; sku; price; quantity; image_path;
     }
 }
