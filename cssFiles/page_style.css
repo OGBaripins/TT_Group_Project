@@ -20,6 +20,11 @@ img {
     height: 57px
 }
 
+.center-text {
+    text-align: center;
+    margin-top: 15px
+}
+
 .normalText-big {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 24px;
