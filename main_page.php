@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
+    <title>Main page</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="cssFiles/page_style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <title>Main page</title>
-
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -33,7 +30,7 @@
         function set_product_cookie(val) {
             document.cookie = "product=" + val;
         }
-        
+
         set_cookie('all');
         set_product_cookie("");
         document.cookie = "bought=false";
@@ -59,7 +56,7 @@
         </span>
     </div>
     <!--CATEGORY BAR-->
-    <div class="navbar">
+    <div class="navbar overlay-navbar">
         <a class="normalText-small" href="main_page.php">Home</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>

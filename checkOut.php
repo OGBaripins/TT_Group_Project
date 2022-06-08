@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Checkout</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
@@ -10,8 +13,6 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <title>Main page</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
@@ -46,7 +47,7 @@
 
 <body>
     <!--TOP BAR-->
-    <?php require 'side_cart.php';?>
+    <?php require 'side_cart.php'; ?>
     <div class="logo-text">
         <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
@@ -66,24 +67,24 @@
     <br>
     <br>
     <div class="container">
-        
+
         <div class="row" id="ContentBar">
             <?php include "get_products.php" ?>
         </div>
         <div class="row" id="ContentBar">
             <button type="button" class="actionButton" onclick="buyItems()">Purchase Items</button>
         </div>
-        <h4 
-            <?php if ($_COOKIE['bought'] == 'false') {
+        <h4 <?php if ($_COOKIE['bought'] == 'false') {
                 echo "hidden";
-            } ?> 
-            class="normalText-medium"> <?php 
-            if ($_COOKIE['money'] != 0) {
-                echo("You have purchased the selected items for "); echo("{$_COOKIE['money']}"); echo("$"); 
-            } else {
-                echo("You have no items to purchase!");
-            }
-            ?></h4>
+            } ?> class="normalText-medium"> <?php
+                                            if ($_COOKIE['money'] != 0) {
+                                                echo ("You have purchased the selected items for ");
+                                                echo ("{$_COOKIE['money']}");
+                                                echo ("$");
+                                            } else {
+                                                echo ("You have no items to purchase!");
+                                            }
+                                            ?></h4>
     </div>
 
 

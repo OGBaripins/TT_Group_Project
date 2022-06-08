@@ -39,12 +39,6 @@
                             $data = array("sku" => "{$cartArr[$i]}");
                             $data_string = json_encode($data);
 
-                            // $data = <<<DATA
-                            //     {  
-                            //     "sku": "{$cartArr[$i]}"
-                            //     }
-                            //     DATA;
-
                             curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
 
                             $resp = curl_exec($curl);

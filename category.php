@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Category</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
@@ -11,8 +13,6 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <title>Main page</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
@@ -41,7 +41,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<!-- test cpmment -->
 
 <body>
     <!--TOP BAR-->
@@ -52,7 +51,7 @@
         </span>
     </div>
     <!--CATEGORY BAR-->
-    <div class="navbar overlay-best6">
+    <div class="navbar overlay-navbar">
         <a class="normalText-small" href="main_page.php" onclick="set_cookie('all');"> Home</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>

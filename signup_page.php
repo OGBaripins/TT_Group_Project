@@ -1,7 +1,3 @@
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<!-- ||WHAT DO WE DO WITH THESE??|| -->
 <?php
 $isHidden = True;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -36,12 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 
 <head>
-    <title>Login Page</title>
+    <title>Sign Up Page</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
     <!--Custom styles-->
     <link rel="stylesheet" type="text/css" href="cssFiles/loginAndSingIn.css">
 </head>
@@ -86,25 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <h4 <?php if ($isHidden) {
                                     echo "hidden";
                                 } ?> class=" err-message normalText-medium">Username/Password/e-mail was not provided</h4>
-                                    <!-- <script>
-                                function goMainPage() {
-                                    if (document.getElementById("username").value == "") {
-                                        alert("PLEASE INSERT A USERNAME!");
-                                    } else if (document.getElementById("password").value == "") {
-                                        alert("PLEASE INSERT A PASSWORD!");
-                                    } else if (document.getElementById("email").value == "") {
-                                        alert("PLEASE INSERT AN EMAIL!");
-                                    }
-                                    if (document.getElementById("email").value == "") { // check @
-                                        alert("PLEASE INSERT AN EMAIL!");
-                                    } else if (document.getElementById("email").value == "") { // check .
-                                        alert("PLEASE INSERT AN EMAIL!");
-                                    } else {
-                                        window.location.href = "index.html";
-                                    }
-                                }
-                            </script> -->
-
                         </div>
                     </form>
                 </div>

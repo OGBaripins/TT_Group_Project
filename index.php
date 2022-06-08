@@ -1,8 +1,3 @@
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<!-- ||WHAT DO WE DO WITH THESE??|| -->
-
 <!DOCTYPE html>
 <html>
 
@@ -100,26 +95,3 @@
 </body>
 
 </html>
-
-<?php
-if (isset($_POST['submitMe'])) {
-
-    for ($i = 0; $i < $count; $i++) {
-        $name = !empty($_POST['name' . $i]) ? $_POST['name' . $i] : '-';
-        $protein = !empty($_POST['protein' . $i]) ? $_POST['protein' . $i] : '-';
-        $fat = !empty($_POST['fat' . $i]) ? $_POST['fat' . $i] : '-';
-        $carbs = !empty($_POST['carbs' . $i]) ? $_POST['carbs' . $i] : '-';
-
-        if ($name == '-' or $protein == 0 or $fat == 0 or $carbs == 0) {
-            "<h3 id = 'normalText'>All fields have not been filled!</h3>";
-            return;
-        } else {
-            $text = '<h3 id="normalText" >The calories for ' . $name . ' (' . $weight . 'g) are:<br>Protein: ' . ($protein * 4) * ($weight / 100) . ' kcal ;<br>Fat: ' . ($fat * 9) * ($weight / 100) . ' kcal ;<br>Carbohydrates: ' . ($carbs * 4) * ($weight / 100) . ' kcal<br>Full calories: ' . (($protein * 4) + ($fat * 9) + ($carbs * 4)) * ($weight / 100) . ' kcal ;</h3><br>';
-            array_push($strings, $text);
-        }
-    }
-    for ($i = 0; $i < count($strings); $i++) {
-        echo $strings[$i];
-    }
-}
-?>

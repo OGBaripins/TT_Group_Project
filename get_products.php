@@ -1,6 +1,6 @@
 <script>
     function buyProduct(val, cookieList, currentMoney, productPrice) {
-        document.cookie = "cart="+ cookieList + val + ",";
+        document.cookie = "cart=" + cookieList + val + ",";
         document.cookie = "product=";
         console.log("product=");
         window.location.href = "category.php";
@@ -38,7 +38,7 @@ if ($das_cookie === 'all' || $das_cookie === 'cart') {
 function sendData($arr)
 {
     $arr = json_decode($arr, true);
-    if ($_COOKIE['category'] == 'cart'){
+    if ($_COOKIE['category'] == 'cart') {
         $cartArr = explode(",", $_COOKIE['cart']);
     }
     for ($i = 0; $i < count($arr['data']); $i++) {
@@ -70,7 +70,7 @@ function sendData($arr)
         } else { // FOR ALL PRODUCTS IN CATEGORY
             if ($_COOKIE['category'] == 'cart') {
                 for ($j = 0; $j < count($cartArr); $j++) {
-                    if ($cartArr[$j] == $arr['data'][$i]['sku']){
+                    if ($cartArr[$j] == $arr['data'][$i]['sku']) {
                         echo ("
                             <div class='col sp1 item'>
                                 <div>
@@ -83,12 +83,8 @@ function sendData($arr)
                                     <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
                                         class='img-fluid' />
                                 </div>
-                                <div class='overlay'>
-                                    <a href='product.php' class='btn btn-unique normalText-medium' onclick=\"set_product_cookie('{$arr['data'][$i]['sku']}');\"> {$arr['data'][$i]['sku']}</a>
-                                </div>
                             </div>
                         ");
-                        
                     }
                 }
             } else {
