@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $isHidden = False;
     } else {
-        $url = "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/create.php";
+        $url = "localhost/TT_Group_Project/php_api/api/product/create.php";
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $resp = curl_exec($curl);
         curl_close($curl);
         sleep(2);
-        header("Location: main_page.php");
+        header("Location: index.php");
         return;
     }
 }

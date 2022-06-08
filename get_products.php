@@ -41,29 +41,26 @@ function sendData($arr)
         if ($_COOKIE['product'] != "") { // FOR SINGLE PRODUCT
             if ($arr['data'][$i]['sku'] == $_COOKIE['product'] ) {
                 echo ("
-                <div class='col sp1 singleItem'>
-                    <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
+                    <div class='row'>
+                        <div class='col s5 singleItem'>
+                            <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
                             class='img-fluid singleProduct' />
-                </div>
-                <div class='col sp1 right descriptionBox'>
-                    <div class='row'>
-                        <div>
-                            <h3>{$arr['data'][$i]['name']}</h3>
+                        </div>
+                        <div class='col s1'></div>
+                        <div class='col s6 descriptionBox'>
+                            <table>
+                                <tr><td class='productTitle'>{$arr['data'][$i]['name']}<td></tr>
+                                <tr><td>Price: {$arr['data'][$i]['price']}$</td></tr>
+                                <tr><td>Available Quantity: {$arr['data'][$i]['quantity']}</td></tr>
+                                <tr><td>Available Quantity: {$arr['data'][$i]['sku']}</td></tr>
+                            </table>
                             <br>
-                            <h5>Price: {$arr['data'][$i]['price']}$</h5>
-                            <br>
-                            <h5>Quantity: {$arr['data'][$i]['quantity']}</h5>
+                            <a class='actionBuyButton' onclick='buyProduct()' data-abc='true'> Buy now </a>
+                            <div class='price-wrap'>
+                                <small class='text-center'>(Free shipping)</small>
+                            </div> 
                         </div>
                     </div>
-                    <br>
-                    <div class='row'>
-                        <div>
-                            <a href='category.php' onclick='buyProduct();' class='actionBuyButton' data-abc='true'> Buy now </a>
-                            <small>(Free shipping)</small>
-                        </div>
-                    </div>
-                </div>
-                
                 ");
                 break;
             }
