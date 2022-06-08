@@ -1,3 +1,11 @@
+<script>
+    function buyProduct(){
+        document.cookie = "product=";
+        console.log("product=");
+        window.location.href = "category.php";
+    }
+</script>
+
 <?php
 
 $curl = curl_init();
@@ -33,25 +41,35 @@ function sendData($arr)
         if ($_COOKIE['product'] != "") { // FOR SINGLE PRODUCT
             if ($arr['data'][$i]['sku'] == $_COOKIE['product'] ) {
                 echo ("
-                <div class='col sp5 singleItem'>
+                <div class='col sp1 singleItem'>
                     <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
                             class='img-fluid singleProduct' />
                 </div>
-                <div class='col sp5'>
-                    <div>
-                        <table>
-                            <tr>
-                            <td>{$arr['data'][$i]['name']}</td>
-                            <td><p>{$arr['data'][$i]['price']}$</p></td>
-                            </tr>
-                        </table>
+                <div class='col sp1 right descriptionBox'>
+                    <div class='row'>
+                        <div>
+                            <table>
+                                <tr>
+                                <td>{$arr['data'][$i]['name']}</td>
+                                </tr>
+                                <tr>
+                                <td><p>Price: {$arr['data'][$i]['price']}$</p></td>
+                                </tr>
+                                <tr>
+                                <td><p>Quantity: {$arr['data'][$i]['quantity']}</p></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                     <br>
-                    <a href='category.php' onclick='set_product_cookie('');' class='actionBuyButton' data-abc='true'> Buy now </a>
-                    <div class='price-wrap'>
-                        <small class='text-success'>(Free shipping)</small>
-                    </div> 
+                    <div class='row'>
+                        <div>
+                            <a href='category.php' onclick='buyProduct();' class='actionBuyButton' data-abc='true'> Buy now </a>
+                            <small>(Free shipping)</small>
+                        </div>
+                    </div>
                 </div>
+                
                 ");
                 break;
             }
