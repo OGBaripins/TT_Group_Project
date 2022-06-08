@@ -7,7 +7,7 @@ $all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'T
 if ($das_cookie === 'all') {
 
     for ($i = 0; $i < count($all_prod_arr); $i++) {
-        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}");
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output1 = curl_exec($curl);
         sendData($output1);
@@ -15,7 +15,7 @@ if ($das_cookie === 'all') {
     curl_close($curl);
 } else {
 
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/TT_Group_Project/php_api/api/product/{$das_cookie}");
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $output1 = curl_exec($curl);
 
@@ -42,10 +42,9 @@ function sendData($arr)
                     <td><p>{$arr['data'][$i]['price']}$</p></td>
                     </tr>
                 </table>
-                <img src='https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg'
+                <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
                     class='img-fluid' />
             </div>
-            
         </div>
         ");
         // echo "

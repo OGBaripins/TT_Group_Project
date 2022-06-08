@@ -13,7 +13,7 @@ body {
 img {
   border-radius: 8px;
   width: 280px;
-  height: 200px;
+  height: 280px;
 }
 
 .navbar {
@@ -152,7 +152,7 @@ img {
   overflow: hidden;
   position: relative;
   width: 300px;
-  height: 320px;
+  height: 400px;
   border-radius: 16px;
 }
 
