@@ -33,6 +33,12 @@
         function set_cookie(val) {
             document.cookie = "category=" + val;
         }
+
+        function set_product_cookie(val) {
+            document.cookie = "product=" + val;
+        }
+
+        set_product_cookie("");
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -64,7 +70,7 @@
     <br></br>
     <div class="container">
         <div class="row">
-            <?php include "get_prod.php" ?>
+            <?php include "get_products.php" ?>
         </div>
     </div>
 

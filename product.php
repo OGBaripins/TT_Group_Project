@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="cssFiles/productPage_style.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/page_style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -34,6 +34,7 @@
         }
 
         function set_cookie(val) {
+            document.cookie = "product=";
             document.cookie = "category=" + val;
         }
 
@@ -82,7 +83,7 @@
     <br></br>
     <div class="container">
         <!--PRODUCT-->
-        <?php include "get_prod.php" ?>
+        <?php include "get_products.php" ?>
     </div>
 
 </body>

@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <script>
+        
+
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
             var instances = M.Collapsible.init(elems, {
@@ -37,8 +39,12 @@
         function set_product_cookie(val) {
             document.cookie = "product=" + val;
         }
-        
         set_cookie('all');
+        set_product_cookie("");
+        
+        if ($_COOKIE['category'] != "all") {
+            document.cookie = "category=all";
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -71,7 +77,7 @@
     <br></br>
     <div class="container">
         <div class="row">
-            <?php include "get_prod.php" ?>
+            <?php include "get_products.php" ?>
         </div>
     </div>
 

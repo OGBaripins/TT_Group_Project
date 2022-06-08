@@ -18,6 +18,10 @@
 </head>
 
 <body>
+    <script>
+        document.cookie = "category=all";
+        document.cookie = "product=";
+    </script>
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -63,8 +67,8 @@
                                     $arr = json_decode($output1, true);
                                     for ($i = 0; $i < count($arr['data']); $i++) {
                                         if ($_POST['username'] == $arr['data'][$i]['username'] && $_POST['password'] == $arr['data'][$i]['passwd']) {
-                                            header("Location: http://localhost/TT_Group_Project/main_page.php");
                                             $_COOKIE['category'] = "all";
+                                            header("Location: http://localhost/TT_Group_Project/main_page.php");
                                             return;
                                         }
                                     }
