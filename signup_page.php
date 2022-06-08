@@ -82,10 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="submitBtn normalText-medium"">Sign up</button>
+                            <button type="submit" class="submitBtn normalText-medium">Sign up</button>
                             <h4 <?php if ($isHidden) {
                                     echo "hidden";
-                                } ?> class=" err-message normalText-medium">Username/Password/e-mail was not provided<h4>
+                                } ?> class=" err-message normalText-medium">Username/Password/e-mail was not provided</h4>
                                     <!-- <script>
                                 function goMainPage() {
                                     if (document.getElementById("username").value == "") {

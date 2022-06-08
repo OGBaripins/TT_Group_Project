@@ -22,6 +22,8 @@
         document.cookie = "category=all";
         document.cookie = "product=";
         document.cookie = "cart=";
+        document.cookie = "money=";
+        document.cookie = "bought=false";
     </script>
     <div class="container">
         <div class="d-flex justify-content-center h-100">

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,6 +32,7 @@
 
         function buyItems() {
             document.cookie = "cart=";
+            document.cookie = "bought=true";
             window.location.href = "checkOut.php";
         }
     </script>
@@ -46,7 +46,7 @@
 
 <body>
     <!--TOP BAR-->
-    <?php require 'side_cart.php' ?>
+    <?php require 'side_cart.php';?>
     <div class="logo-text">
         <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
@@ -66,12 +66,24 @@
     <br>
     <br>
     <div class="container">
+        
         <div class="row" id="ContentBar">
             <?php include "get_products.php" ?>
         </div>
         <div class="row" id="ContentBar">
             <button type="button" class="actionButton" onclick="buyItems()">Purchase Items</button>
         </div>
+        <h4 
+            <?php if ($_COOKIE['bought'] == 'false') {
+                echo "hidden";
+            } ?> 
+            class="normalText-medium"> <?php 
+            if ($_COOKIE['money'] != 0) {
+                echo("You have purchased the selected items for "); echo("{$_COOKIE['money']}"); echo("$"); 
+            } else {
+                echo("You have no items to purchase!");
+            }
+            ?></h4>
     </div>
 
 
