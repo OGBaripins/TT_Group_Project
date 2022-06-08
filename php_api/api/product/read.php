@@ -20,7 +20,8 @@ function fetchData($product)
     $result = $product->read();
     $num  = $result->rowCount();
 
-    if ($num > 0) {
+    if ($num > 0 && $product->table != "users") {
+
         $prod_arr = array();
         $prod_arr["data"] = array();
 
@@ -34,6 +35,25 @@ function fetchData($product)
                 "price" => $price,
                 "quantity" => $quantity,
                 "image_path" => $image_path,
+            );
+
+            array_push($prod_arr["data"], $product_item);
+        }
+
+        echo json_encode($prod_arr);
+    } elseif ($num > 0 && $product->table == "users") {
+
+        $prod_arr = array();
+        $prod_arr["data"] = array();
+
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+
+            $product_item = array(
+                "id" => $id,
+                "username" => $username,
+                "passwd" => $passwd,
+                "e_mail" => $e_mail,
             );
 
             array_push($prod_arr["data"], $product_item);

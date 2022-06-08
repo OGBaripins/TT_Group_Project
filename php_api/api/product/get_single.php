@@ -12,18 +12,9 @@ include_once "../../models/Photo_tech.php";
 include_once "../../models/Sports.php";
 include_once "../../models/Tools.php";
 include_once "../../models/TV_audio.php";
-include_once "../../models/Users.php";
 
 //Finding a String with SKU code
 $body = file_get_contents('php://input');
-
-if (preg_match('/"username".*/', $body, $matches)) {
-    $database = new Database();
-    $db = $database->connect();
-    deleteUserData(new Users($db));
-    return;
-}
-
 preg_match('/"sku".*/', $body, $matches);
 
 $matchStr = $matches[0];
@@ -41,47 +32,28 @@ checkDatabase($skuCode);
 
 function checkDatabase($code)
 {
-    echo $code;
     $database = new Database();
     $db = $database->connect();
 
     //Choosing in wich table the data will be inserted to
 
     if (substr($code, 0, -5) == "KKL") {
-        echo json_encode(
-            array("Computer is being deleted from the Database")
-        );
-        deleteData(new Computers($db));
+        get_single_entree(new Computers($db));
     };
     if (substr($code, 0, -5) == "HJO") {
-        echo json_encode(
-            array("Phone is being deleted from the Database")
-        );
-        deleteData(new Phones($db));
+        get_single_entree(new Phones($db));
     };
     if (substr($code, 0, -5) == "PED") {
-        echo json_encode(
-            array("Photo Tech is being deleted from the Database")
-        );
-        deleteData(new Photo_tech($db));
+        get_single_entree(new Photo_tech($db));
     }
     if (substr($code, 0, -5) == "QZC") {
-        echo json_encode(
-            array("Sports EQuipment is being deleted from the Database")
-        );
-        deleteData(new Sports($db));
+        get_single_entree(new Sports($db));
     };
     if (substr($code, 0, -5) == "MIP") {
-        echo json_encode(
-            array("Tools are being deleted from the Database")
-        );
-        deleteData(new Tools($db));
+        get_single_entree(new Tools($db));
     };
     if (substr($code, 0, -5) == "LEC") {
-        echo json_encode(
-            array("TV, Audio Tech is being deleted from the Database")
-        );
-        deleteData(new TV_audio($db));
+        get_single_entree(new TV_audio($db));
     } else {
         return;
     };
@@ -89,36 +61,39 @@ function checkDatabase($code)
 
 
 //Data removing function
-function deleteData($product)
+function get_single_entree($product)
 {
+
     $data = json_decode(file_get_contents("php://input"));
 
     $product->sku = $data->sku;
 
-    if ($product->delete()) {
-        echo json_encode(
-            array("Product removed")
-        );
+    $result = $product->get_single();
+    $num  = $result->rowCount();
+
+    if ($num >= 0) {
+        $prod_arr = array();
+        $prod_arr["data"] = array();
+
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+
+            $product_item = array(
+                "id" => $id,
+                "name" => $name,
+                "sku" => $sku,
+                "price" => $price,
+                "quantity" => $quantity,
+                "image_path" => $image_path,
+            );
+
+            array_push($prod_arr["data"], $product_item);
+        }
+
+        echo json_encode($prod_arr);
     } else {
         echo json_encode(
-            array("Product was not removed")
-        );
-    }
-}
-
-function deleteUserData($user)
-{
-    $data = json_decode(file_get_contents("php://input"));
-
-    $user->username = $data->username;
-
-    if ($user->delete()) {
-        echo json_encode(
-            array("User removed")
-        );
-    } else {
-        echo json_encode(
-            array("User was not removed")
+            array("message" => "No Posts Found")
         );
     }
 }

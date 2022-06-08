@@ -90,4 +90,20 @@ class Phones extends Product
 
         return false;
     }
+
+    public function get_single()
+    {
+
+        $query = "SELECT * FROM " . $this->table . " WHERE sku = :sku";
+
+        $stmt = $this->conn->prepare($query);
+
+        $this->sku = htmlspecialchars($this->sku);
+
+        $stmt->bindParam(":sku", $this->sku);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
