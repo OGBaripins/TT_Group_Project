@@ -52,7 +52,7 @@
         </span>
     </div>
     <!--CATEGORY BAR-->
-    <div class="navbar">
+    <div class="navbar overlay-best6">
         <a class="normalText-small" href="main_page.php" onclick="set_cookie('all');"> Home</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>

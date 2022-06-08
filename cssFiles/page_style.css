@@ -22,8 +22,18 @@ img {
 
 .center-text {
     text-align: center;
-    margin-top: 15px
+    margin-top: 15px;
 }
+.overlay-best6 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.damn-daniel {
+    z-index: 2;
+}
+
 
 .normalText-big {
     font-family: Verdana, Geneva, sans-serif;
