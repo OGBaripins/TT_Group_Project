@@ -19,8 +19,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <script>
-        
-
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
             var instances = M.Collapsible.init(elems, {
@@ -41,7 +39,7 @@
         }
         set_cookie('all');
         set_product_cookie("");
-        
+
         if ($_COOKIE['category'] != "all") {
             document.cookie = "category=all";
         }
@@ -53,24 +51,24 @@
 </head>
 
 <body>
-<script>    
-</script>   
+    <script>
+    </script>
     <!--TOP BAR-->
     <?php require 'side_cart.php' ?>
-    <div class="logo-text">
-        <span class="text text-center">
+    <div class="logo-text ">
+        <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span>
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php">Home</a>
-        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
-        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
-        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
-        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
-        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
-        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+        <a class="normalText-small" href="main_page.php">Home</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
 
     <br></br>

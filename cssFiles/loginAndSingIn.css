@@ -8,6 +8,46 @@ body {
   font-family: "Numans", sans-serif;
 }
 
+.normalText-big {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.normalText-medium {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.normalText-small {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+
 .err-message{
     font-family: Verdana;
     font-size: 16px;
