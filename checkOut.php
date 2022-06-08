@@ -19,9 +19,11 @@
     <!--Import materialize.css-->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, { accordion: true });
+            var instances = M.Collapsible.init(elems, {
+                accordion: true
+            });
         });
 
         function set_cookie(val) {
@@ -46,19 +48,19 @@
     <!--TOP BAR-->
     <?php require 'side_cart.php';?>
     <div class="logo-text">
-        <span class="text text-center">
+        <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span>
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php" onclick="set_cookie('all');">Home</a>
-        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
-        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
-        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
-        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
-        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
-        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+        <a class="normalText-small" href="main_page.php" onclick="set_cookie('all');">Home</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
     <!--ITEM LIST-->
     <br>
@@ -66,7 +68,7 @@
     <div class="container">
         
         <div class="row" id="ContentBar">
-            <?php include "get_products.php"?>
+            <?php include "get_products.php" ?>
         </div>
         <div class="row" id="ContentBar">
             <button type="button" class="actionButton" onclick="buyItems()">Purchase Items</button>
@@ -75,8 +77,8 @@
                 echo "hidden";
             } ?> class="normalText-medium"><?php echo("{$_COOKIE['money']}");  echo(" YESTS");?></h4>
     </div>
-    
-    
+
+
 </body>
 
 </html>
