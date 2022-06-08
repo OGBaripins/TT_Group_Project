@@ -75,7 +75,7 @@
         </div>
         <h4 <?php if ($_COOKIE['bought'] == 'false') {
                 echo "hidden";
-            } ?> class="normalText-medium"><?php echo("{$_COOKIE['money']}");  echo(" YESTS");?></h4>
+            } ?> class="normalText-medium"><?php echo("You have purchased the selected items for "); echo("{$_COOKIE['money']}"); echo("$"); ?></h4>
     </div>
 
 

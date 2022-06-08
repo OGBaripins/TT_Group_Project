@@ -1,5 +1,3 @@
-<?php require_once('cart_script.php'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -73,7 +73,6 @@ function sendData($arr)
                     if ($cartArr[$j] == $arr['data'][$i]['sku']){
                         echo ("
                             <div class='col sp1 item'>
-                                <p>{$_COOKIE['money']}</p>
                                 <div>
                                     <table>
                                         <tr>
