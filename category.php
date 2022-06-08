@@ -51,7 +51,7 @@
     <!--TOP BAR-->
     <?php require 'side_cart.php' ?>
     <div class="logo-text">
-        <span class="text text-center">
+        <span class="normalText-medium">
             <marquee>&#128176;Shopping here is basically stealing!&#128176;</marquee>
         </span>
     </div>
