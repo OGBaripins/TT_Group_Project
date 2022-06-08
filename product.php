@@ -69,7 +69,7 @@
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php">Home</a>
+        <a href="main_page.php" onclick="set_cookie('all');">Home</a>
         <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
         <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
         <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
@@ -82,8 +82,10 @@
     <br></br>
     <br></br>
     <div class="container">
+        <div class="row">
         <!--PRODUCT-->
         <?php include "get_products.php" ?>
+        </div>
     </div>
 
 </body>

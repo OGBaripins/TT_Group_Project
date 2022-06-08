@@ -33,7 +33,11 @@ function sendData($arr)
         if ($_COOKIE['product'] != "") { // FOR SINGLE PRODUCT
             if ($arr['data'][$i]['sku'] == $_COOKIE['product'] ) {
                 echo ("
-                <div class='col sp1 singleItem'>
+                <div class='col sp5 singleItem'>
+                    <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
+                            class='img-fluid singleProduct' />
+                </div>
+                <div class='col sp5'>
                     <div>
                         <table>
                             <tr>
@@ -41,9 +45,12 @@ function sendData($arr)
                             <td><p>{$arr['data'][$i]['price']}$</p></td>
                             </tr>
                         </table>
-                        <img src='Product_Pictures/{$arr['data'][$i]['image_path']}.png'
-                            class='img-fluid singleProduct' />
                     </div>
+                    <br>
+                    <a href='category.php' onclick='set_product_cookie('');' class='actionBuyButton' data-abc='true'> Buy now </a>
+                    <div class='price-wrap'>
+                        <small class='text-success'>(Free shipping)</small>
+                    </div> 
                 </div>
                 ");
                 break;
