@@ -73,9 +73,17 @@
         <div class="row" id="ContentBar">
             <button type="button" class="actionButton" onclick="buyItems()">Purchase Items</button>
         </div>
-        <h4 <?php if ($_COOKIE['bought'] == 'false') {
+        <h4 
+            <?php if ($_COOKIE['bought'] == 'false') {
                 echo "hidden";
-            } ?> class="normalText-medium"><?php echo("You have purchased the selected items for "); echo("{$_COOKIE['money']}"); echo("$"); ?></h4>
+            } ?> 
+            class="normalText-medium"> <?php 
+            if ($_COOKIE['money'] != 0) {
+                echo("You have purchased the selected items for "); echo("{$_COOKIE['money']}"); echo("$"); 
+            } else {
+                echo("You have no items to purchase!");
+            }
+            ?></h4>
     </div>
 
 
