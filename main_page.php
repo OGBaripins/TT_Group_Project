@@ -33,8 +33,10 @@
         function set_product_cookie(val) {
             document.cookie = "product=" + val;
         }
+        
         set_cookie('all');
         set_product_cookie("");
+        document.cookie = "bought=false";
 
         if ($_COOKIE['category'] != "all") {
             document.cookie = "category=all";

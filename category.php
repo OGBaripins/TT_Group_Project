@@ -33,7 +33,7 @@
         function set_product_cookie(val) {
             document.cookie = "product=" + val;
         }
-
+        document.cookie = "bought=false";
         set_product_cookie("");
     </script>
 

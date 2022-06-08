@@ -1,5 +1,5 @@
 <script>
-    function buyProduct(val, cookieList) {
+    function buyProduct(val, cookieList, currentMoney, productPrice) {
         document.cookie = "cart="+ cookieList + val + ",";
         document.cookie = "product=";
         console.log("product=");
@@ -59,7 +59,7 @@ function sendData($arr)
                                 <tr><td>SKU code: {$arr['data'][$i]['sku']}</td></tr>
                             </table>
                             <br>
-                            <a class='actionBuyButton' onclick='buyProduct(\"{$arr['data'][$i]['sku']}\", \"{$_COOKIE['cart']}\")'> Buy now </a>
+                            <a class='actionBuyButton' onclick='buyProduct(\"{$arr['data'][$i]['sku']}\", \"{$_COOKIE['cart']}\", \"{$_COOKIE['money']}\", \"{$arr['data'][$i]['price']}\")'> Buy now </a>
                             <div class='price-wrap'>
                                 <small class='text-center normalText-small'>(Free shipping)</small>
                             </div>
@@ -73,6 +73,7 @@ function sendData($arr)
                     if ($cartArr[$j] == $arr['data'][$i]['sku']){
                         echo ("
                             <div class='col sp1 item'>
+                                <p>{$_COOKIE['money']}</p>
                                 <div>
                                     <table>
                                         <tr>
@@ -88,6 +89,7 @@ function sendData($arr)
                                 </div>
                             </div>
                         ");
+                        
                     }
                 }
             } else {
@@ -104,7 +106,7 @@ function sendData($arr)
                                 class='img-fluid' />
                         </div>
                         <div class='overlay'>
-                            <a href='product.php' class='btn btn-unique normalText-medium' onclick=\"set_product_cookie('{$arr['data'][$i]['sku']}');\"> {$arr['data'][$i]['sku']}</a>
+                            <a href='product.php' class='btn btn-unique normalText-medium' onclick='set_product_cookie(\"{$arr['data'][$i]['sku']}\");'>Inspect</a>
                         </div>
                     </div>
                 ");
