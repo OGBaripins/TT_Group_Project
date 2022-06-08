@@ -21,12 +21,13 @@
     <script>
         document.cookie = "category=all";
         document.cookie = "product=";
+        document.cookie = "cart=";
     </script>
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Log in</h3>
+                    <h3 class="normalText-big">Log in</h3>
                     <div class="d-flex justify-content-end social_icon">
                         <span><i class="fab fa-facebook-square"></i></span>
                         <span><i class="fab fa-google-plus-square"></i></span>
@@ -39,25 +40,25 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="username" placeholder="username" id="username">
+                            <input type="text" class="form-control normalText-small" name="username" placeholder="username" id="username">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" name="password" placeholder="password" id="password">
+                            <input type="password" class="form-control normalText-small" name="password" placeholder="password" id="password">
                         </div>
-                        <div class="row remember">
+                        <div class="row remember normalText-small">
                             <input type="checkbox">Remember Me
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="submitBtn">Login</button>
+                            <button type="submit" class="submitBtn normalText-medium">Login</button>
                             <?php
                             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if (empty($_POST['username'])) {
-                                    echo '<h4 class="err-message text-center">ENTER A USERNAME!<h4>';
+                                    echo '<h4 class="err-message text-center normalText-small">ENTER A USERNAME!<h4>';
                                 } else if (empty($_POST['password'])) {
-                                    echo '<h4 class="err-message text-center">ENTER A PASSWORD<h4>';
+                                    echo '<h4 class="err-message text-center normalText-small">ENTER A PASSWORD<h4>';
                                 } else {
                                     $curl = curl_init();
                                     curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/UsersRead.php");
@@ -67,12 +68,11 @@
                                     $arr = json_decode($output1, true);
                                     for ($i = 0; $i < count($arr['data']); $i++) {
                                         if ($_POST['username'] == $arr['data'][$i]['username'] && $_POST['password'] == $arr['data'][$i]['passwd']) {
-                                            $_COOKIE['category'] = "all";
                                             header("Location: http://localhost/TT_Group_Project/main_page.php");
                                             return;
                                         }
                                     }
-                                    echo '<h4 class="err-message text-center">INCORRECT LOGIN!<h4>';
+                                    echo '<h4 class="err-message text-center normalText-small">INCORRECT LOGIN!<h4>';
                                 }
                             }
                             ?>
@@ -80,10 +80,10 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <div class="d-flex justify-content-center links">
+                    <div class="d-flex justify-content-center links normalText-small">
                         Don't have an account?<a href="signup_page.php" onclick="">Sign Up</a>
                     </div>
-                    <div class="d-flex justify-content-center links">
+                    <div class="d-flex justify-content-center links normalText-small">
                         <a href="#" onclick="forgor()">Forgot your password?</a>
                         <script>
                             function forgor() {

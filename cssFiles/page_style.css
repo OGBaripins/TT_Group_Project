@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+
+
 body {
   background-image: url("../bgPictures/Ygrad.jpg");
   background-size: cover;
@@ -13,6 +15,45 @@ img {
   border-radius: 8px;
   width: 280px;
   height: 280px;
+}
+
+.normalText-big {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.normalText-medium {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.normalText-small {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
 }
 
 .singleProduct {
@@ -279,4 +320,8 @@ img {
 
 tr{
   font-weight: bold;
+}
+
+.productTitle{
+  font-size: 24px;
 }
