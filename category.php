@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="cssFiles/page_style.css" />
@@ -57,13 +57,13 @@
     </div>
     <!--CATEGORY BAR-->
     <div class="navbar">
-        <a href="main_page.php" onclick="set_cookie('all');"> Home</a>
-        <a href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
-        <a href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
-        <a href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
-        <a href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
-        <a href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
-        <a href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
+        <a class="normalText-small" href="main_page.php" onclick="set_cookie('all');"> Home</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ComputerRead');">Computers</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('PhoneRead');">Phones</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('Photo_techRead');">Photo Tech</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('SportsRead');">Sports</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('TV_audioRead');">TV/Audio</a>
+        <a class="normalText-small" href="category.php" onclick="set_cookie('ToolsRead');">Tools</a>
     </div>
     <!--PRODUCT LIST-->
     <br></br>

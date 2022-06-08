@@ -49,15 +49,15 @@ function sendData($arr)
                         <div class='col s1'></div>
                         <div class='col s6 descriptionBox'>
                             <table>
-                                <tr><td class='productTitle'>{$arr['data'][$i]['name']}<td></tr>
-                                <tr><td>Price: {$arr['data'][$i]['price']}$</td></tr>
-                                <tr><td>Available Quantity: {$arr['data'][$i]['quantity']}</td></tr>
-                                <tr><td>Available Quantity: {$arr['data'][$i]['sku']}</td></tr>
+                                <tr><td class='normalText-big'>{$arr['data'][$i]['name']}<td></tr>
+                                <tr><td class='normalText-small'>Price: {$arr['data'][$i]['price']}$</td></tr>
+                                <tr><td class='normalText-small'>Available Quantity: {$arr['data'][$i]['quantity']}</td></tr>
+                                <tr><td class='normalText-small'>Available Quantity: {$arr['data'][$i]['sku']}</td></tr>
                             </table>
                             <br>
-                            <a class='actionBuyButton' onclick='buyProduct()' data-abc='true'> Buy now </a>
+                            <a class='actionBuyButton normalText-small' onclick='buyProduct()' data-abc='true'> Buy now </a>
                             <div class='price-wrap'>
-                                <small class='text-center'>(Free shipping)</small>
+                                <small class='text-center normalText-small'>(Free shipping)</small>
                             </div>
                         <div>
                             <h3 class='normalText-big'>{$arr['data'][$i]['name']}</h3>
