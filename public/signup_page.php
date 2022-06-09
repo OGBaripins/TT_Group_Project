@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $isHidden = False;
     } else {
-        $url = "localhost/TT_Group_Project/php_api/api/product/create.php";
+        $url = "localhost/TT_Group_Project/src/php_api/api/product/create.php";
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="cssFiles/loginAndSingIn.css">
+    <link rel="stylesheet" type="text/css" href="style/loginAndSingIn.css">
 </head>
 
 <body>

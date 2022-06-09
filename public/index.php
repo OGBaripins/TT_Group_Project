@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="cssFiles/loginAndSingIn.css">
+    <link rel="stylesheet" type="text/css" href="style/loginAndSingIn.css">
 </head>
 
 <body>
@@ -58,14 +58,14 @@
                                     echo '<h4 class="err-message text-center normalText-small">ENTER A PASSWORD<h4>';
                                 } else {
                                     $curl = curl_init();
-                                    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/UsersRead.php");
+                                    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/src/php_api/api/product/UsersRead.php");
                                     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
                                     $output1 = curl_exec($curl);
                                     curl_close($curl);
                                     $arr = json_decode($output1, true);
                                     for ($i = 0; $i < count($arr['data']); $i++) {
                                         if ($_POST['username'] == $arr['data'][$i]['username'] && $_POST['password'] == $arr['data'][$i]['passwd']) {
-                                            header("Location: http://localhost/TT_Group_Project/main_page.php");
+                                            header("Location: http://localhost/TT_Group_Project/public/main_page.php");
                                             return;
                                         }
                                     }

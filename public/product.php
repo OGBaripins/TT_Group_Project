@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="cssFiles/page_style.css" />
+    <link rel="stylesheet" type="text/css" href="style/page_style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row">
             <!--PRODUCT-->
-            <?php include "get_products.php" ?>
+            <?php include "../src/get_products.php" ?>
         </div>
     </div>
 

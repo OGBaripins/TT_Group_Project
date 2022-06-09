@@ -16,7 +16,7 @@ $all_prod_arr = ['ComputerRead', 'PhoneRead', 'Photo_techRead', 'SportsRead', 'T
 if ($das_cookie === 'all' || $das_cookie === 'cart') {
 
     for ($i = 0; $i < count($all_prod_arr); $i++) {
-        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$all_prod_arr[$i]}.php");
+        curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/src/php_api/api/product/{$all_prod_arr[$i]}.php");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output1 = curl_exec($curl);
         sendData($output1);
@@ -24,7 +24,7 @@ if ($das_cookie === 'all' || $das_cookie === 'cart') {
     curl_close($curl);
 } else {
 
-    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/php_api/api/product/{$das_cookie}.php");
+    curl_setopt($curl, CURLOPT_URL, "localhost/TT_Group_Project/src/php_api/api/product/{$das_cookie}.php");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $output1 = curl_exec($curl);
 

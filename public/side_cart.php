@@ -24,7 +24,7 @@
                         <?php
                         $comb_price = 0;
                         $cartArr = explode(",", $_COOKIE['cart']);
-                        $url = "localhost/TT_Group_Project/php_api/api/product/get_single.php";
+                        $url = "localhost/TT_Group_Project/src/php_api/api/product/get_single.php";
 
                         $curl = curl_init();
                         for ($i = 0; $i < count($cartArr); $i++) {

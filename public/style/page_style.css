@@ -118,8 +118,11 @@ img {
   margin: 0;
 }
 
-.navbar a:hover,
-.subnav:hover .subnavbtn {
+.selected-a-link{
+    background-color: red;
+}
+
+.navbar a:hover{
   background-color: red;
 }
 
